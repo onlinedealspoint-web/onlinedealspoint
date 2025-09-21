@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cart | Online Deals Point</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="cart">
+  <header class="topbar">
+    <div class="topbar__left">
+      <a href="index.html" class="brand">
+        <img src="images/logo.jpeg" alt="ODP logo" />
+        <span>ODP</span>
+      </a>
+    </div>
+    <nav class="topbar__center">
+      <a href="index.html" class="navlink">Home</a>
+      <a href="shop.html" class="navlink">Shop</a>
+    </nav>
+    <div class="topbar__right">
+      <a href="cart.html" class="cartlink active" aria-label="Cart">
+        <span class="icon">🛒</span>
+        <span id="cartCount" class="badge">0</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="cart">
+    <h1>Cart — Items</h1>
+    <div id="cartItems" class="cart__list"></div>
+    <div id="cartEmpty" class="empty hidden">Your cart is empty.</div>
+    <div class="cart__footer">
+      <div class="cart__total">
+        <span>Total</span>
+        <strong id="cartTotal">₹0</strong>
+      </div>
+      <div class="cart__actions">
+        <a href="shop.html" class="btn btn--ghost">Continue shopping</a>
+        <a id="checkoutBtn" href="checkout.html" class="btn btn--primary">Checkout</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="sitefooter">
+    <small>© <span id="year"></span> Online Deals Point.</small>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>

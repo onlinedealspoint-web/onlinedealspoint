@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Checkout | Online Deals Point</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="checkout">
+  <header class="topbar">
+    <div class="topbar__left">
+      <a href="index.html" class="brand">
+        <img src="images/logo.jpeg" alt="ODP logo" />
+        <span>ODP</span>
+      </a>
+    </div>
+    <nav class="topbar__center">
+      <a href="index.html" class="navlink">Home</a>
+      <a href="shop.html" class="navlink">Shop</a>
+    </nav>
+    <div class="topbar__right">
+      <a href="cart.html" class="cartlink">
+        <span class="icon">🛒</span>
+        <span id="cartCount" class="badge">0</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="checkout">
+    <h1>Payment</h1>
+
+    <section class="summary">
+      <h2>Order Summary</h2>
+      <div id="orderSummary"></div>
+      <div class="summary__total">
+        <span>Total</span>
+        <strong id="orderTotal">₹0</strong>
+      </div>
+    </section>
+
+    <section class="upi">
+      <div class="upi__id">
+        <span>Pay to UPI ID:</span>
+        <strong id="upiIdText">dashb208@pingpay</strong>
+        <button class="btn btn--tiny" id="copyUpiBtn">Copy UPI ID</button>
+      </div>
+
+      <div class="qrwrap">
+        <div id="qrcode" class="qr"></div>
+        <div class="qr__buttons">
+          <button id="downloadQR" class="btn btn--ghost">Download QR</button>
+          <a id="openUPILink" class="btn btn--primary" href="#" target="_blank" rel="noopener">Open in UPI app</a>
+        </div>
+      </div>
+
+      <div class="instructions">
+        <h3>Instructions</h3>
+        <ol>
+          <li>Pay the exact amount via the UPI QR or app link below.</li>
+          <li>Take a payment screenshot after a successful transfer.</li>
+          <li>Click “Send Screenshot” to WhatsApp and attach the image.</li>
+        </ol>
+      </div>
+
+      <div class="wa">
+        <a id="waBtn" class="btn btn--wa">
+          <span class="wa__icon">🟢</span>
+          <span>Send Screenshot</span>
+        </a>
+        <small class="muted">The message is auto‑typed based on items.</small>
+      </div>
+    </section>
+  </main>
+
+  <footer class="sitefooter">
+    <small>© <span id="year"></span> Online Deals Point.</small>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

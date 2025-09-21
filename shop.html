@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shop | Online Deals Point</title>
+  <meta name="description" content="Browse All, OTT, and Software deals. Select duration and checkout via UPI QR." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="shop">
+  <header class="topbar">
+    <div class="topbar__left">
+      <a href="index.html" class="brand">
+        <img src="images/logo.jpeg" alt="ODP logo" />
+        <span>ODP</span>
+      </a>
+    </div>
+    <nav class="topbar__center" aria-label="Primary">
+      <a href="index.html" class="navlink">Home</a>
+      <a href="shop.html" class="navlink active">Shop</a>
+    </nav>
+    <div class="topbar__right">
+      <a href="cart.html" class="cartlink" aria-label="Cart">
+        <span class="icon">🛒</span>
+        <span id="cartCount" class="badge">0</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Big colorful category buttons + search -->
+  <section class="filters">
+  <div class="tabs tabs--big" role="tablist" aria-label="Categories">
+    <button class="tab active" role="tab" data-cat="all" aria-selected="true">
+      <img class="tabimg" id="tabAll" alt="All" /> All
+    </button>
+    <button class="tab" role="tab" data-cat="ott" aria-selected="false">
+      <img class="tabimg" id="tabOtt" alt="OTT" /> OTT
+    </button>
+    <button class="tab" role="tab" data-cat="softwares" aria-selected="false">
+      <img class="tabimg" id="tabSoft" alt="Softwares" /> Softwares
+    </button>
+  </div>
+
+  <form id="searchForm" class="search" role="search" autocomplete="off">
+    <div class="searchbar">
+      <span class="sicon" aria-hidden="true">🔍</span>
+      <input id="searchInput" type="search" placeholder="Search in All" aria-label="Search products in selected category" />
+      <button type="button" id="clearSearch" class="clear-btn" aria-label="Clear search">✕</button>
+      <button type="submit" id="searchBtn" class="btn btn--soft" aria-label="Search">
+        <span class="label">Search</span>
+      </button>
+    </div>
+  </form>
+</section>
+
+  <main class="grid" id="productsGrid" aria-live="polite">
+    <!-- OTT (data-v1m, data-v6m, data-v1y contain prices; missing => disabled) -->
+    <div class="card" data-id="netflix" data-category="ott" data-name="Netflix" data-domain="netflix.com" data-v1m="119" data-v6m="399" data-v1y="699">
+      <div class="card__media">
+        <img src="https://logo.clearbit.com/netflix.com?size=256" alt="Netflix logo" onerror="this.onerror=null;this.src='images/logo/netflix.png'">
+      </div>
+      <div class="card__title">Netflix</div>
+      <div class="card__overlay"><button class="card__view">View</button></div>
+    </div>
+
+    <div class="card" data-id="prime" data-category="ott" data-name="Prime Video" data-domain="primevideo.com" data-v1m="49" data-v6m="199" data-v1y="369">
+      <div class="card__media"><img src="https://logo.clearbit.com/primevideo.com?size=256" alt="Prime Video" onerror="this.onerror=null;this.src='images/logo/prime.png'"></div>
+      <div class="card__title">Prime Video</div>
+      <div class="card__overlay"><button class="card__view">View</button></div>
+    </div>
+
+    <div class="card" data-id="sonyliv" data-category="ott" data-name="Sony LIV" data-domain="sonyliv.com" data-v1m="49" data-v6m="219" data-v1y="349">
+      <div class="card__media"><img src="https://logo.clearbit.com/sonyliv.com?size=256" alt="Sony LIV" onerror="this.onerror=null;this.src='images/logo/sonyliv.png'"></div>
+      <div class="card__title">Sony LIV</div>
+      <div class="card__overlay"><button class="card__view">View</button></div>
+    </div>
+
+    <div class="card" data-id="zee5" data-category="ott" data-name="ZEE5" data-domain="zee5.com" data-v1m="49" data-v6m="219" data-v1y="349">
+      <div class="card__media"><img src="https://logo.clearbit.com/zee5.com?size=256" alt="ZEE5" onerror="this.onerror=null;this.src='images/logo/zee5.png'"></div>
+      <div class="card__title">ZEE5</div>
+      <div class="card__overlay"><button class="card__view">View</button></div>
+    </div>
+
+    <div class="card" data-id="hotstar-super" data-category="ott" data-name="Jio Hotstar Super" data-domain="hotstar.com" data-v1m="49" data-v6m="199" data-v1y="399">
+      <div class="card__media"><img src="https://logo.clearbit.com/hotstar.com?size=256" alt="Hotstar" onerror="this.onerror=null;this.src='images/logo/hotstar-super.png'"></div>
+      <div class="card__title">Jio Hotstar Super</div>
+      <div class="card__overlay"><button class="card__view">View</button></div>
+    </div>
+
+    <div class="card" data-id="hotstar-4k" data-category="ott" data-name="Jio Hotstar 4K" data-domain="hotstar.com" data-v1m="105" data-v6m="399" data-v1y="799">
+      <div class="card__media"><img src="https://logo.clearbit.com/hotstar.com?size=256" alt="Hotstar 4K" onerror="this.onerror=null;this.src='images/logo/hotstar-4k.png'"></div>
+      <div class="card__title">Jio Hotstar 4K</div>
+      <div class="card__overlay"><button class="card__view">View</button></div>
+    </div>
+
+    <div class="card" data-id="youtube" data-category="ott" data-name="YouTube Premium" data-domain="youtube.com" data-v1m="35" data-v6m="299" data-v1y="599">
+      <div class="card__media"><img src="https://logo.clearbit.com/youtube.com?size=256" alt="YouTube" onerror="this.onerror=null;this.src='images/logo/youtube.png'"></div>
+      <div class="card__title">YouTube Premium</div>
+      <div class="card__overlay"><button class="card__view">View</button></div>
+    </div>
+
+    <div class="card" data-id="hoichoi" data-category="ott" data-name="Hoichoi" data-domain="hoichoi.tv" data-v1m="39" data-v6m="299" data-v1y="499">
+      <div class="card__media"><img src="https://logo.clearbit.com/hoichoi.tv?size=256" alt="Hoichoi" onerror="this.onerror=null;this.src='images/logo/hoichoi.png'"></div>
+      <div class="card__title">Hoichoi</div>
+      <div class="card__overlay"><button class="card__view">View</button></div>
+    </div>
+
+    <div class="card" data-id="ullu" data-category="ott" data-name="Ullu" data-domain="ullu.app" data-v1m="59" data-v6m="179" data-v1y="299">
+      <div class="card__media"><img src="https://logo.clearbit.com/ullu.app?size=256" alt="Ullu" onerror="this.onerror=null;this.src='images/logo/ullu.png'"></div>
+      <div class="card__title">Ullu</div>
+      <div class="card__overlay"><button class="card__view">View</button></div>
+    </div>
+
+    <div class="card" data-id="fancode" data-category="ott" data-name="FanCode" data-domain="fancode.com" data-v6m="199" data-v1y="399">
+      <div class="card__media"><img src="https://logo.clearbit.com/fancode.com?size=256" alt="FanCode" onerror="this.onerror=null;this.src='images/logo/fancode.png'"></div>
+      <div class="card__title">FanCode</div>
+      <div class="card__overlay"><button class="card__view">View</button></div>
+    </div>
+
+    <div class="card" data-id="crunchyroll" data-category="ott" data-name="Crunchyroll" data-domain="crunchyroll.com" data-v1m="59" data-v6m="169" data-v1y="349">
+      <div class="card__media"><img src="https://logo.clearbit.com/crunchyroll.com?size=256" alt="Crunchyroll" onerror="this.onerror=null;this.src='images/logo/crunchyroll.png'"></div>
+      <div class="card__title">Crunchyroll</div>
+      <div class="card__overlay"><button class="card__view">View</button></div>
+    </div>
+
+    <div class="card" data-id="spotify" data-category="ott" data-name="Spotify" data-domain="spotify.com" data-v1m="59" data-v6m="189" data-v1y="349">
+      <div class="card__media"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Spotify_icon.svg/768px-Spotify_icon.svg.png?20220821125323?size=256" alt="Spotify" onerror="this.onerror=null;this.src='images/logo/spotify.png'"></div>
+      <div class="card__title">Spotify</div>
+      <div class="card__overlay"><button class="card__view">View</button></div>
+    </div>
+
+    <div class="card" data-id="sunnxt" data-category="ott" data-name="Sun NXT" data-domain="sunnxt.com" data-v1m="79" data-v6m="199" data-v1y="399">
+      <div class="card__media"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d5/Sun_NXT_logo_small.png/280px-Sun_NXT_logo_small.png?size=256" alt="Sun NXT" onerror="this.onerror=null;this.src='images/logo/sunnxt.png'"></div>
+      <div class="card__title">Sun NXT</div>
+      <div class="card__overlay"><button class="card__view">View</button></div>
+    </div>
+
+    <div class="card" data-id="altbalaji" data-category="ott" data-name="ALTBalaji" data-domain="altbalaji.com" data-v1m="49" data-v6m="179" data-v1y="349">
+      <div class="card__media"><img src="https://logo.clearbit.com/altbalaji.com?size=256" alt="ALTBalaji" onerror="this.onerror=null;this.src='images/logo/altbalaji.png'"></div>
+      <div class="card__title">ALTBalaji</div>
+      <div class="card__overlay"><button class="card__view">View</button></div>
+    </div>
+
+    <div class="card" data-id="aha" data-category="ott" data-name="Aha" data-domain="aha.video" data-v1m="79" data-v6m="199" data-v1y="399">
+      <div class="card__media"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Aha_OTT_Logo.svg/600px-Aha_OTT_Logo.svg.png?20210408112448?size=256" alt="Aha" onerror="this.onerror=null;this.src='images/logo/aha.png'"></div>
+      <div class="card__title">Aha</div>
+      <div class="card__overlay"><button class="card__view">View</button></div>
+    </div>
+
+    <!-- SOFTWARE (WhatsApp contact only) -->
+    <div class="card" data-id="canva" data-category="softwares" data-name="Canva Pro / EDU" data-domain="canva.com" data-software="true">
+      <div class="card__media"><img src="https://logo.clearbit.com/canva.com?size=256" alt="Canva" onerror="this.onerror=null;this.src='images/logo/canva.png'"></div>
+      <div class="card__title">Canva Pro / EDU</div>
+      <div class="card__overlay"><button class="card__view">View</button></div>
+    </div>
+
+    <div class="card" data-id="linkedin" data-category="softwares" data-name="LinkedIn" data-domain="linkedin.com" data-software="true">
+      <div class="card__media"><img src="https://logo.clearbit.com/linkedin.com?size=256" alt="LinkedIn" onerror="this.onerror=null;this.src='images/logo/linkedin.png'"></div>
+      <div class="card__title">LinkedIn</div>
+      <div class="card__overlay"><button class="card__view">View</button></div>
+    </div>
+
+    <div class="card" data-id="adobe-cc" data-category="softwares" data-name="Adobe Creative Cloud" data-domain="adobe.com" data-software="true">
+      <div class="card__media"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Adobe_Creative_Cloud_rainbow_icon.svg/180px-Adobe_Creative_Cloud_rainbow_icon.svg.png?size=256" alt="Adobe CC" onerror="this.onerror=null;this.src='images/logo/adobe-cc.png'"></div>
+      <div class="card__title">Adobe Creative Cloud</div>
+      <div class="card__overlay"><button class="card__view">View</button></div>
+    </div>
+
+    <div class="card" data-id="google-storage" data-category="softwares" data-name="Google Storage" data-domain="google.com" data-software="true">
+      <div class="card__media"><img src="https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fev41qa51m2mng6fmj5fr.png?size=256" alt="Google Storage" onerror="this.onerror=null;this.src='images/logo/google-storage.png'"></div>
+      <div class="card__title">Google Storage</div>
+      <div class="card__overlay"><button class="card__view">View</button></div>
+    </div>
+
+    <div class="card" data-id="google-drive" data-category="softwares" data-name="Google Drive" data-domain="drive.google.com" data-software="true">
+      <div class="card__media"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Google_Drive_icon_%282020%29.svg/768px-Google_Drive_icon_%282020%29.svg.png?20221103153031?size=256" alt="Google Drive" onerror="this.onerror=null;this.src='images/logo/google-drive.png'"></div>
+      <div class="card__title">Google Drive</div>
+      <div class="card__overlay"><button class="card__view">View</button></div>
+    </div>
+
+    <div class="card" data-id="microsoft" data-category="softwares" data-name="Microsoft" data-domain="microsoft.com" data-software="true">
+      <div class="card__media"><img src="https://logo.clearbit.com/microsoft.com?size=256" alt="Microsoft" onerror="this.onerror=null;this.src='images/logo/microsoft.png'"></div>
+      <div class="card__title">Microsoft</div>
+      <div class="card__overlay"><button class="card__view">View</button></div>
+    </div>
+
+    <div class="card" data-id="coursera" data-category="softwares" data-name="Coursera" data-domain="coursera.org" data-software="true">
+      <div class="card__media"><img src="https://logo.clearbit.com/coursera.org?size=256" alt="Coursera" onerror="this.onerror=null;this.src='images/logo/coursera.png'"></div>
+      <div class="card__title">Coursera</div>
+      <div class="card__overlay"><button class="card__view">View</button></div>
+    </div>
+
+    <div class="card" data-id="axure" data-category="softwares" data-name="Axure" data-domain="axure.com" data-software="true">
+      <div class="card__media"><img src="https://logo.clearbit.com/axure.com?size=256" alt="Axure" onerror="this.onerror=null;this.src='images/logo/axure.png'"></div>
+      <div class="card__title">Axure</div>
+      <div class="card__overlay"><button class="card__view">View</button></div>
+    </div>
+
+    <div class="card" data-id="autocad" data-category="softwares" data-name="AutoCAD" data-domain="autodesk.com" data-software="true">
+      <div class="card__media"><img src="https://logo.clearbit.com/autodesk.com?size=256" alt="AutoCAD" onerror="this.onerror=null;this.src='images/logo/autocad.png'"></div>
+      <div class="card__title">AutoCAD</div>
+      <div class="card__overlay"><button class="card__view">View</button></div>
+    </div>
+
+    <div class="card" data-id="figma" data-category="softwares" data-name="Figma" data-domain="figma.com" data-software="true">
+      <div class="card__media"><img src="https://logo.clearbit.com/figma.com?size=256" alt="Figma" onerror="this.onerror=null;this.src='images/logo/figma.png'"></div>
+      <div class="card__title">Figma</div>
+      <div class="card__overlay"><button class="card__view">View</button></div>
+    </div>
+
+    <div class="card" data-id="tableau" data-category="softwares" data-name="Tableau" data-domain="tableau.com" data-software="true">
+      <div class="card__media"><img src="https://logo.clearbit.com/tableau.com?size=256" alt="Tableau" onerror="this.onerror=null;this.src='images/logo/tableau.png'"></div>
+      <div class="card__title">Tableau</div>
+      <div class="card__overlay"><button class="card__view">View</button></div>
+    </div>
+
+    <div class="card" data-id="ms-copilot" data-category="softwares" data-name="Microsoft Copilot" data-domain="copilot.microsoft.com" data-software="true">
+      <div class="card__media"><img src="https://images.seeklogo.com/logo-png/50/1/microsoft-365-copilot-logo-png_seeklogo-501781.png?size=256" alt="Microsoft Copilot" onerror="this.onerror=null;this.src='images/logo/ms-copilot.png'"></div>
+      <div class="card__title">Microsoft Copilot</div>
+      <div class="card__overlay"><button class="card__view">View</button></div>
+    </div>
+
+    <div class="card" data-id="bitdefender" data-category="softwares" data-name="Bitdefender" data-domain="bitdefender.com" data-software="true">
+      <div class="card__media"><img src="https://logo.clearbit.com/bitdefender.com?size=256" alt="Bitdefender" onerror="this.onerror=null;this.src='images/logo/bitdefender.png'"></div>
+      <div class="card__title">Bitdefender</div>
+      <div class="card__overlay"><button class="card__view">View</button></div>
+    </div>
+
+    <div class="card" data-id="filmora" data-category="softwares" data-name="Filmora" data-domain="wondershare.com" data-software="true">
+      <div class="card__media"><img src="https://logo.clearbit.com/wondershare.com?size=256" alt="Filmora" onerror="this.onerror=null;this.src='images/logo/filmora.png'"></div>
+      <div class="card__title">Filmora</div>
+      <div class="card__overlay"><button class="card__view">View</button></div>
+    </div>
+
+    <div class="card" data-id="gammaai" data-category="softwares" data-name="Gamma AI" data-domain="gamma.app" data-software="true">
+      <div class="card__media"><img src="https://www.saudiaat.com/wp-content/uploads/2025/03/8hla4f05.png?size=256" alt="Gamma AI" onerror="this.onerror=null;this.src='images/logo/gammaai.png'"></div>
+      <div class="card__title">Gamma AI</div>
+      <div class="card__overlay"><button class="card__view">View</button></div>
+    </div>
+
+    <div class="card" data-id="elevenlabs" data-category="softwares" data-name="ElevenLabs" data-domain="elevenlabs.io" data-software="true">
+      <div class="card__media"><img src="https://logo.clearbit.com/elevenlabs.io?size=256" alt="ElevenLabs" onerror="this.onerror=null;this.src='images/logo/elevenlabs.png'"></div>
+      <div class="card__title">ElevenLabs</div>
+      <div class="card__overlay"><button class="card__view">View</button></div>
+    </div>
+
+    <div class="card" data-id="chatgpt-plus" data-category="softwares" data-name="ChatGPT Pro / Plus" data-domain="openai.com" data-software="true">
+      <div class="card__media"><img src="https://logo.clearbit.com/openai.com?size=256" alt="ChatGPT Plus" onerror="this.onerror=null;this.src='images/logo/chatgpt-plus.png'"></div>
+      <div class="card__title">ChatGPT Pro / Plus</div>
+      <div class="card__overlay"><button class="card__view">View</button></div>
+    </div>
+  </main>
+
+  <div id="noResults" class="empty hidden">No products found</div>
+
+  <!-- Generic modal -->
+  <div id="productModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="pmTitle">
+    <div class="modal__card">
+      <button class="modal__close" id="pmClose" aria-label="Close">✕</button>
+      <div class="pm__head">
+        <div class="pm__imgwrap"><img id="pmImg" alt="" /></div>
+        <div class="pm__meta">
+          <h2 id="pmTitle"></h2>
+          <div id="pmBadge" class="badge badge--cat"></div>
+        </div>
+      </div>
+      <div id="pmVariants" class="pm__variants"></div>
+      <div id="pmActions" class="pm__actions"></div>
+    </div>
+  </div>
+
+  <footer class="sitefooter">
+    <small>© <span id="year"></span> Online Deals Point.</small>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/shop.js"></script>
+</body>
+</html>
